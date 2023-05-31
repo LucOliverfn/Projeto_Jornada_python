@@ -4,6 +4,7 @@ projeto = str(input ("Digite o nome do projeto :"))
 horas_estimadas = float(input ("Digite o total de horas estimadas :"))
 valor_hora = float(input ("Digite o valor da hora :"))
 prazo = str(input ("Digite em meses quanto sera o prazo para a entrega :"))
+nome = str(input("Qual o nome do arquivo? :"))
 total = valor_hora * horas_estimadas
 # falando que a variavel pdf é o objeto do FPDF
 pdf = FPDF()
@@ -19,5 +20,5 @@ pdf.text(115,175,str(valor_hora))
 pdf.text(115,190,prazo)
 pdf.text(115,205, str(total))
 
-pdf.output("Orçamento.pdf")
+pdf.output(f'{nome}.pdf')
 print("Orçamento Gerado com sucesso!!!!!!!!!")
